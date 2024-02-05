@@ -1,43 +1,57 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>'s Valentines Day Card</title>
+    <title>Your Name's Valentines Day Card</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+
     <style>
-        body{
-        font-family: 'Times New Roman';
-        background-color: #f8d7da;
-        text-align: center;
-        margin:0;
-        padding: 20px;
+        body {
+            font-family: 'Pacifico', cursive;
+            background-color: #ffebf0; /* Light pink background */
+            text-align: center;
+            margin: 0;
+            padding: 40px;
         }
-        
-        /adjustments for header/
-        h1{
-        color: #721c24; 
-        font-size: 2em;
+
+        /* adjustments for header */
+        h1 {
+            color: #e83e8c; /* Dark pink text */
+            font-size: 2em;
         }
-        
-        /adjustments for paragraph/
-        p{
-        color:#721c24;
-        font-size: 1.2em;
-        line-height: 1.5;
+
+        /* adjustments for paragraph */
+        p {
+            color: #e83e8c; /* Dark pink text */
+            font-size: 1.2em;
+            line-height: 1.5;
         }
-        
-        /adjustments for image added/
-        img{
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px; /adds a rounded border/
-        margin-top: 15px;   /adds space above the picture, can be any side/
+
+        /* adjustments for image added */
+        img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            border-radius: 15px; /* More rounded border */
+            margin-top: 15px;
         }
-        
+
+        /* Message box style */
+        .message-box {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
     </style>
 </head>
+<body>
+    <h1>Happy Valentines Day!</h1>
 
-    <body>
-        <h1>Happy Valentines Day ___!</h1>
-        <img src="your_image_url.jpg" alt="heart Image">
+    <img src="https://imgur.com/vfQcBYw.jpg" alt="heart Image">
+
+    <div class="message-box">
         <p>Your message here!</p>
-    </body>
+    </div>
+</body>
 </html>
