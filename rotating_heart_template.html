@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> ___'s Valentine's Day Card</title>
+  <style>
+    
+    <!-- this imports a module from Compass, which has several pre-built functions for CSS-->
+    @import "compass/css3";
+
+    <!-- this imports a font from Google fonts, can be changed -->
+    @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+    
+    <!-- this defines a Sass variable, which stores this specific color of $red for later use-->
+    $red: #D32F2F;
+
+    body {
+      background-color: #ddd;       
+      font-family: 'Poiret One';
+    }
+
+    <!-- #card is the ID of one of the <div> brackets in the body of this document and this is its modifications-->
+    #card {
+      position: absolute;
+      top:100px;
+      width:460px;
+      height:260px;
+      left:50%;
+      margin-left:-230px;
+    }
+
+    <!-- this targets the class 'heart', which we define in the body. we are making these elements within this class float to the left-->
+    #card .heart {
+      width:260px;
+      height: 260px;
+      float: left;
+    }
+
+    <!-- this targets the element with the id 'circle'. the circle is the swiveling movement of the hearts when they are animated>
+    #card #circle {
+      height:130px;
+      width: 130px;
+      border-radius: 50%;
+      background-color:$red;
+    }
+
+    <!-- these next few sectors handle the positioning of the shapes on the card, which you can modify but it might prove difficult-->
+    #card #rect, #card #rect2 {
+      margin-top: -60px;
+      width:130px;
+      height: 130px;
+      background-color:$red;
+      border-radius:35% 0 0 0;
+    }
+    #card #half2 {
+      transform: rotate(-90deg);
+      margin-top:-330px;
+      margin-left: -200px;
+    }
+    #card #heart2 {
+      margin-top: -60px;
+      margin-left:-130px;
+    }
+    #card #heart2 #circle, #card #heart2 #rect{
+      background-color:#fff;
+    }
+    #card #heart2 #half2 #rect{
+      border-bottom:1px solid #eee;
+      margin-top: -61px;
+    }
+
+    <!-- this modifies the message on the top of the card! feel free to play around with this-->
+    #card #message {
+      float:left;
+      width: 200px;
+      height:200px;
+      margin-left: -130px;
+      background-color: #333;
+      border-radius:35% 0 35% 0;
+      text-align:center;
+    }
+
+    <!-- this is the message hidden in the hearts. have fun with this! -->
+    #card #message h2 {
+      font-size: 20px;
+      color: #fff;
+      width:160px;
+      margin-top: 60px;
+      margin-left: 16px;
+    }
+
+
+    <!-- these are the animations of the hearts! don't worry too much about the workings of these, we will cover this another time! -->
+    #card #heart1 {
+      transform: rotate(180deg);
+      animation: closeLeft 2s ease-in-out forwards;
+    }
+
+    #card #heart2 {
+      animation: closeRight 2s ease-in-out forwards;
+    }
+
+    #card:hover #heart1 {
+      animation: openLeft 2s ease-in-out forwards;
+    }
+
+    #card:hover #heart2 {
+      animation: openRight 2s ease-in-out forwards;
+    }
+
+    @keyframes closeLeft {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(180deg); }
+    }
+
+    @keyframes openLeft {
+      from { transform: rotateY(180deg); }
+      to { transform: rotateY(0deg); }
+    }
+
+    @keyframes openRight {
+      from { transform: rotateX(180deg); }
+      to { transform: rotateX(0deg) rotateZ(180deg); }
+    }
+
+    @keyframes closeRight {
+      from { transform: rotateX(0deg) rotate(180deg); }
+      to { transform: rotateX(180deg); }
+    }
+
+
+<!-- feel free to add more customizations here ! -->>
+
+  </style>
+
+
+
+<!-- this is the body of the html docyument-->
+  
+</head>
+<body>  
+  <div id="card">
+    <center><h1> ____'s Valentines Day Card/ your message </h1></center>
+    
+    <div class="heart" id="heart1">
+      <div id="half1">
+        <div id= "circle"></div>
+        <div id= "rect"></div>
+      </div>
+      
+      <div id="half2">
+        <div id ="circle"></div>
+        <div id ="rect"></div>
+      </div>
+      
+    </div>
+    
+    <div id="message">
+      <h2>Happy Valentines Day ___! / your message</h2>
+    </div>
+    
+    <div class="heart" id="heart2">
+      <div id="half1">
+        <div id="circle"></div>
+        <div id="rect"></div>
+      </div>
+      
+      <div id="half2">
+        <div id="circle"></div>
+        <div id="rect"></div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
